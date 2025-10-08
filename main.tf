@@ -16,9 +16,9 @@ provider "aws" {
 
 resource "aws_instance" "noname" {
   ami           = "ami-052064a798f08f0d3" // Refer aws and get correct ami id
-  count = 3
+  count = 2
   instance_type = "t2.micro"
   tags = {
-        	Name = "Terraforminst-${count.index}"
+        	Name = "Terracloud-${count.index}"
  	}
 }
